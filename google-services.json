@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "404893824039",
+    "project_id": "olol-7e779",
+    "storage_bucket": "olol-7e779.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404893824039:android:2460d302ea81a274d80a02",
+        "android_client_info": {
+          "package_name": "com.project.olol"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwMBb7AHaUBX2IxvjbIWGlH8Mfx6HToec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
