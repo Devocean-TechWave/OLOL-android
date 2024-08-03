@@ -1,4 +1,4 @@
-package com.project.olol.presentation.ui
+package com.project.olol.data.service
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
