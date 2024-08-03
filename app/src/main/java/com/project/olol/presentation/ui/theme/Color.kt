@@ -1,4 +1,4 @@
-package com.project.olol.ui.theme
+package com.project.olol.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
