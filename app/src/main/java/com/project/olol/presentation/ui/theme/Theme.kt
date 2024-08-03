@@ -1,6 +1,5 @@
-package com.project.olol.ui.theme
+package com.project.olol.presentation.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
