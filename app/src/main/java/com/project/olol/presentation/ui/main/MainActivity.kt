@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
 import com.project.olol.presentation.ui.component.BottomNavItem
 import com.project.olol.presentation.ui.component.NavigationBar
+import com.project.olol.presentation.ui.mission.MissionFragment
 import com.project.olol.presentation.ui.theme.OLOLTheme
 
 
@@ -35,7 +36,7 @@ class MainActivity : ComponentActivity() {
                 ) { innerPadding ->
                     Box(modifier = Modifier.padding(innerPadding)) {
                         when (selectedTab.value) {
-                            BottomNavItem.Mission -> MissionScreen()
+                            BottomNavItem.Mission -> MissionFragment(hasMissions = false)
                             BottomNavItem.Friends -> FriendsScreen()
                             BottomNavItem.Test -> TestScreen()
                             BottomNavItem.My -> MyScreen()
