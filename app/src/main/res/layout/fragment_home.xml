@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.ui.home.HomeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 가족 이름  & 랭킹-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            tools:ignore="UselessParent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="우리 가족은 "
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textFontWeight="700"/>
+            <TextView
+                android:id="@+id/text_family_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="쿼카 가족"
+                android:textSize="17sp"
+                android:textColor="@color/mainColor"
+                android:textFontWeight="700"/> <!-- TODO : mockup data 연결-->
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="랭킹 "
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textFontWeight="600"/>
+            <TextView
+                android:id="@+id/text_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textFontWeight="600"/> <!-- TODO : mockup data 연결-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="위 "
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textFontWeight="600"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👑"
+                android:textSize="11sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/TossFaceFont"/>
+        </LinearLayout>
+
+        <!-- 가족 구성원 -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/default_profile_image"
+                        android:background="@drawable/circle_border"
+                        android:padding="3dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="나"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/default_profile_image"
+                        android:background="@drawable/circle_border"
+                        android:padding="3dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="엄마"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="10dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/default_profile_image"
+                        android:background="@drawable/circle_border"
+                        android:padding="3dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="아빠"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- 그라데이션 파트 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical"
+            android:background="@drawable/gradient_background"
+            android:animateLayoutChanges="true"
+            android:layout_marginTop="25dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/main_character"
+                android:importantForAccessibility="no" />
+            <TextView
+                android:id="@+id/text_mission_isarrive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="오늘의 미션이 도착했어요!"
+                android:textSize="15sp"
+                android:textFontWeight="700"
+                android:textColor="@color/black"/>
+            <Button
+                android:id="@+id/btn_goto_mission"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/button_background"
+                android:text="가족과 함께 할로윈 준비하기"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textFontWeight="700"
+                android:padding="10dp"
+                android:elevation="10dp" /> <!-- TODO : mockup 데이터 연결 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="위 버튼을 눌러 수행하기"
+                android:textColor="#585858"
+                android:textFontWeight="500"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- 성공했던 미션 목록 텍스트 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessLeaf"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="성공했던 최근 미션 3개"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textFontWeight="700"/>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="앨범보기 "
+                    android:textSize="12sp"/>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_arrow_right"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 미션 목록 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:src="@drawable/default_profile_image"
+                    android:contentDescription="미션 이미지"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="미션 이름"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:src="@drawable/default_profile_image"
+                    android:contentDescription="미션 이미지"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="미션 이름"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:src="@drawable/default_profile_image"
+                    android:contentDescription="미션 이미지"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="미션 이름"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
