@@ -23,8 +23,7 @@ sealed class BottomNavItem(
     @DrawableRes var iconUnselected: Int
 ) {
     object Mission : BottomNavItem("미션", R.drawable.ic_mission_selected, R.drawable.ic_mission_unselected)
-    object Friends : BottomNavItem("친구", R.drawable.ic_friends_selected, R.drawable.ic_friends_unselected)
-    object Test : BottomNavItem("테스트", R.drawable.ic_test_selected, R.drawable.ic_test_unselected)
+    object Ranking : BottomNavItem("테스트", R.drawable.ic_test_selected, R.drawable.ic_test_unselected)
     object My : BottomNavItem("마이", R.drawable.ic_my_selected, R.drawable.ic_my_unselected)
 }
 
@@ -35,9 +34,8 @@ fun NavigationBar(selectedTab: BottomNavItem, onTabSelected: (BottomNavItem) -> 
         modifier = Modifier.height(80.dp) // NavigationBar 높이 설정
     ) {
         val items = listOf(
+            BottomNavItem.Ranking,
             BottomNavItem.Mission,
-            BottomNavItem.Friends,
-            BottomNavItem.Test,
             BottomNavItem.My
         )
         items.forEach { item ->
