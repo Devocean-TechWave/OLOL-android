@@ -22,8 +22,8 @@ sealed class BottomNavItem(
     @DrawableRes var iconSelected: Int,
     @DrawableRes var iconUnselected: Int
 ) {
-    object Mission : BottomNavItem("미션", R.drawable.ic_mission_selected, R.drawable.ic_mission_unselected)
-    object Ranking : BottomNavItem("테스트", R.drawable.ic_test_selected, R.drawable.ic_test_unselected)
+    object Ranking : BottomNavItem("랭킹", R.drawable.ic_ranking_selected, R.drawable.ic_ranking_unselected)
+    object Mission : BottomNavItem("홈", R.drawable.ic_home_selected, R.drawable.ic_home_unselected)
     object My : BottomNavItem("마이", R.drawable.ic_my_selected, R.drawable.ic_my_unselected)
 }
 
@@ -45,7 +45,7 @@ fun NavigationBar(selectedTab: BottomNavItem, onTabSelected: (BottomNavItem) -> 
                     Icon(
                         painter = icon,
                         contentDescription = item.title,
-                        modifier = Modifier.size(21.dp) // 아이콘 크기 조정
+                        modifier = Modifier.size(30.dp) // 아이콘 크기 조정
                     )
                 },
                 label = {
