@@ -15,6 +15,6 @@ class TosActivity : AppCompatActivity() {
 
         webView.webViewClient = WebViewClient()
         webView.settings.javaScriptEnabled = false
-        webView.loadUrl("https://tally.so/r/woVRbO")
+        webView.loadUrl("https://efficacious-ease-5ad.notion.site/1284f19e53cc801b809ef0554fcd9f3b?pvs=4")
     }
 }
