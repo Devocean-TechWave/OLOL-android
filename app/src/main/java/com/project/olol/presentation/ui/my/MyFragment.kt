@@ -65,6 +65,12 @@ class MyFragment : Fragment() {
             startActivity(intent)
         }
 
+        // '개인정보 처리방침' 버튼 클릭 시 TosActivity로 이동
+        binding.btnGotoPrivacy.setOnClickListener {
+            val intent = Intent(requireContext(), PrivacyActivity::class.java)
+            startActivity(intent)
+        }
+
         return binding.root
     }
 

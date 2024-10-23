@@ -6,7 +6,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.project.olol.R
 
-class TosActivity : AppCompatActivity() {
+class PrivacyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tos)
@@ -15,6 +15,6 @@ class TosActivity : AppCompatActivity() {
 
         webView.webViewClient = WebViewClient()
         webView.settings.javaScriptEnabled = true
-        webView.loadUrl("https://efficacious-ease-5ad.notion.site/1284f19e53cc801b809ef0554fcd9f3b?pvs=4")
+        webView.loadUrl("https://efficacious-ease-5ad.notion.site/1284f19e53cc805192e0d1f6f326c054?pvs=4")
     }
 }
