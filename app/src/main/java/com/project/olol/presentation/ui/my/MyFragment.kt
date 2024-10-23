@@ -53,6 +53,12 @@ class MyFragment : Fragment() {
             checkPermissionAndPickImage()
         }
 
+        // '1대1 문의하기' 버튼 클릭 시 TosActivity로 이동
+        binding.btnGoto1on1.setOnClickListener {
+            val intent = Intent(requireContext(), TosActivity::class.java)
+            startActivity(intent)
+        }
+
         return binding.root
     }
 
