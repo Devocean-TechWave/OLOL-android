@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginBottom="30dp">
+        android:paddingBottom="30dp">
 
         <!-- 중간 구분선 위로 -->
         <LinearLayout
