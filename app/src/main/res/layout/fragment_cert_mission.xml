@@ -106,12 +106,14 @@
                 android:gravity="center"
                 android:background="@drawable/bg_round_lightgrey">
                 <ImageView
+                    android:id="@+id/ic_image_upload"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginTop="1dp"
                     android:src="@drawable/ic_image"
                     android:importantForAccessibility="no" />
                 <TextView
+                    android:id="@+id/tx_image_upload"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
@@ -144,9 +146,5 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:padding="10dp"/>
-
-<!--    <Button-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="50dp"/>-->
 
 </FrameLayout>
