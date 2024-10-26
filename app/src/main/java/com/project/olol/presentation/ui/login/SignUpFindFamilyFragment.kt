@@ -23,11 +23,15 @@ class SignUpFindFamilyFragment : Fragment() {
 
         binding.run {
             buttonExist.setOnClickListener {
-
+                loginActivity.supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView_login, SignUpExistFamilyFragment())
+                    .commit()
             }
 
             buttonNotExist.setOnClickListener {
-
+                loginActivity.supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView_login, SignUpNotExistFamilyFragment())
+                    .commit()
             }
         }
 
