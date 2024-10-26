@@ -27,7 +27,7 @@
                 android:text="우리 가족은 "
                 android:textSize="16sp"
                 android:textColor="@color/black"
-                android:textFontWeight="700"/>
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/text_family_name"
                 android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 android:text="쿼카 가족"
                 android:textSize="17sp"
                 android:textColor="@color/mainColor"
-                android:textFontWeight="700"/> <!-- TODO : mockup data 연결-->
+                android:textStyle="bold"/> <!-- TODO : mockup data 연결-->
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
