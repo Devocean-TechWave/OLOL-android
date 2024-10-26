@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.login.LoginFragment" >
+
+    <TextView
+        android:id="@+id/textView_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="30dp"
+        android:text="가족과의 추억 저장을 위해\n로그인해주세요!"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_character"
+        android:layout_width="162dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/character_olol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_intro" />
+
+    <TextView
+        android:id="@+id/textView_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/background_login_solid_main"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="10dp"
+        android:text="가족과의 대화가 줄어들지 않도록"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_character"
+        app:layout_constraintStart_toStartOf="@+id/imageView_character"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_character" />
+
+    <TextView
+        android:id="@+id/textView_description2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/background_login_stroke_main"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="10dp"
+        android:text="우리 가족 추억도 쌓고 다른 가족들과 배틀도 해요!"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView_description"
+        app:layout_constraintStart_toStartOf="@+id/textView_description"
+        app:layout_constraintTop_toBottomOf="@+id/textView_description" />
+
+    <TextView
+        android:id="@+id/textView_description3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가족과의 추억, 대화, 설렘"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_description2"
+        app:layout_constraintStart_toStartOf="@+id/textView_description2"
+        app:layout_constraintTop_toBottomOf="@+id/textView_description2" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="15dp"
+        android:background="#D9D9D9"
+        app:layout_constraintEnd_toEndOf="@+id/textView_description3"
+        app:layout_constraintStart_toStartOf="@+id/textView_description3"
+        app:layout_constraintTop_toBottomOf="@+id/textView_description3" />
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="올랑올랑"
+        android:textColor="#D9D9D9"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_login_kakao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/background_kakao_login"
+        android:paddingTop="12dp"
+        android:paddingBottom="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_name"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/imageView_login_kakao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2.5dp"
+            android:src="@drawable/ic_kakao"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_login_kakao"
+            app:layout_constraintEnd_toStartOf="@+id/textView_login_kakao"
+            app:layout_constraintTop_toTopOf="@+id/textView_login_kakao" />
+
+        <TextView
+            android:id="@+id/textView_login_kakao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카카오로 시작하기"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
