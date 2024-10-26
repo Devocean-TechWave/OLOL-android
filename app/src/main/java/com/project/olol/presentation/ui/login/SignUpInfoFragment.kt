@@ -96,6 +96,9 @@ class SignUpInfoFragment : Fragment() {
 
 
             buttonNext.setOnClickListener {
+                loginActivity.supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView_login, SignUpFindFamilyFragment())
+                    .commit()
             }
         }
 
