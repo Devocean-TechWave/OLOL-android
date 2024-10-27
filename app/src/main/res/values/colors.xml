@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="mainColor">#5BE6BE</color>
+    <color name="mainMidColor">#A8EFDA</color>
+    <color name="mainLightColor">#E6FBF5</color>
     <color name="secondColor">#25CABA</color>
     <color name="gradationStart">#6AFF94</color>
     <color name="gradationEnd">#5BE6BE</color>
