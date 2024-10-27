@@ -3,6 +3,7 @@ package com.project.olol.presentation.ui.mission
 import android.Manifest
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.ImageDecoder
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Build
@@ -40,20 +41,41 @@ class CertMissionFragment : Fragment() {
             }
         }
 
+//        imagePickerLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+//            if (result.resultCode == android.app.Activity.RESULT_OK) {
+//                        val selectedImageUri: Uri? = result.data?.data
+//                        selectedImageUri?.let { uri ->
+//                            binding.btnUploadImage.apply {
+//                                background = null
+//                                setBackgroundColor(0)
+//                                background = BitmapDrawable(resources, MediaStore.Images.Media.getBitmap(context.contentResolver, uri))
+//                                binding.icImageUpload.visibility = View.GONE
+//                        binding.txImageUpload.visibility = View.GONE
+//                    }
+//                }
+//            }
+//        }\\
+
         imagePickerLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == android.app.Activity.RESULT_OK) {
-                        val selectedImageUri: Uri? = result.data?.data
-                        selectedImageUri?.let { uri ->
-                            binding.btnUploadImage.apply {
-                                background = null
-                                setBackgroundColor(0)
-                                background = BitmapDrawable(resources, MediaStore.Images.Media.getBitmap(context.contentResolver, uri))
-                                binding.icImageUpload.visibility = View.GONE
-                        binding.txImageUpload.visibility = View.GONE
+                val selectedImageUri: Uri? = result.data?.data
+                selectedImageUri?.let { uri ->
+                    binding.btnUploadImage.apply {
+                        background = null
+                        setBackgroundColor(0)
+                        background = BitmapDrawable(resources, MediaStore.Images.Media.getBitmap(context.contentResolver, uri))
+                        binding.icImageUpload.visibility = View.GONE
+                         binding.txImageUpload.visibility = View.GONE
+                    }
+
+                    binding.btnGotoPicktheme.apply {
+                        setBackgroundResource(R.drawable.bg_round_main)
+                        text = "다음으로"
                     }
                 }
             }
         }
+
 
         binding.btnUploadImage.setOnClickListener {
             checkPermissionAndPickImage()
