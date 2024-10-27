@@ -41,21 +41,6 @@ class CertMissionFragment : Fragment() {
             }
         }
 
-//        imagePickerLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-//            if (result.resultCode == android.app.Activity.RESULT_OK) {
-//                        val selectedImageUri: Uri? = result.data?.data
-//                        selectedImageUri?.let { uri ->
-//                            binding.btnUploadImage.apply {
-//                                background = null
-//                                setBackgroundColor(0)
-//                                background = BitmapDrawable(resources, MediaStore.Images.Media.getBitmap(context.contentResolver, uri))
-//                                binding.icImageUpload.visibility = View.GONE
-//                        binding.txImageUpload.visibility = View.GONE
-//                    }
-//                }
-//            }
-//        }\\
-
         imagePickerLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == android.app.Activity.RESULT_OK) {
                 val selectedImageUri: Uri? = result.data?.data
@@ -70,7 +55,11 @@ class CertMissionFragment : Fragment() {
 
                     binding.btnGotoPicktheme.apply {
                         setBackgroundResource(R.drawable.bg_round_main)
-                        text = "다음으로"
+                        text = "인증하기"
+
+                        setOnClickListener {
+                            CertMissionActivity.viewPager.currentItem = 1
+                        }
                     }
                 }
             }

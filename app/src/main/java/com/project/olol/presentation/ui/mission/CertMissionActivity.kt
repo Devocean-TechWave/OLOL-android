@@ -9,11 +9,15 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class CertMissionActivity : AppCompatActivity() {
+    companion object {
+        lateinit var viewPager: ViewPager2
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cert_mission)
 
-        val viewPager = findViewById<ViewPager2>(R.id.viewPager)
+        viewPager = findViewById(R.id.viewPager)
         viewPager.adapter = ScreenSlidePagerAdapter(this)
     }
 
