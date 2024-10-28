@@ -9,5 +9,6 @@
     <color name="redColor">#FF6F6F</color>
     <color name="lightGrey">#F2F2F2</color>
     <color name="darkGrey">#E4E4E4</color>
+    <color name="white">#FFFFFF</color>
     <color name="black">#000000</color> <!-- 기본 블랙 색상 추가 -->
 </resources>
