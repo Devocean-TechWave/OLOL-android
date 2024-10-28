@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.login.SignUpInfoFragment" >
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="우리 가족을 찾아주세요!"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_title_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="내 가족을 찾기 위해 정보 입력이 필요해요."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView_title"
+                app:layout_constraintTop_toBottomOf="@+id/textView_title" />
+
+            <TextView
+                android:id="@+id/textView_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="성함"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_title_description"
+                app:layout_constraintTop_toBottomOf="@+id/textView_title_description" />
+
+            <EditText
+                android:id="@+id/editText_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/background_edittext_unselected"
+                android:ems="10"
+                android:hint="성함을 입력해주세요."
+                android:inputType="text"
+                android:textSize="14sp"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp"
+                android:textColorHint="#8B95A1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_name"
+                app:layout_constraintTop_toBottomOf="@+id/textView_name" />
+
+            <TextView
+                android:id="@+id/textView_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="닉네임"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/editText_name"
+                app:layout_constraintTop_toBottomOf="@+id/editText_name" />
+
+            <EditText
+                android:id="@+id/editText_nickname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/background_edittext_unselected"
+                android:ems="10"
+                android:hint="닉네임을 입력해주세요."
+                android:inputType="text"
+                android:textSize="14sp"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp"
+                android:textColorHint="#8B95A1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_nickname"
+                app:layout_constraintTop_toBottomOf="@+id/textView_nickname" />
+
+            <TextView
+                android:id="@+id/textView_nickname_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="이미 있는 닉네임이에요! 다른 닉네임을 입력해주세요."
+                android:textColor="@color/redColor"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/editText_nickname"
+                app:layout_constraintTop_toBottomOf="@+id/editText_nickname" />
+
+            <TextView
+                android:id="@+id/textView_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="성별"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView_nickname_error"
+                app:layout_constraintTop_toBottomOf="@+id/textView_nickname_error" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_gender"
+                app:layout_constraintTop_toBottomOf="@+id/textView_gender">
+
+                <Button
+                    android:id="@+id/button_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button_signup_unselected"
+                    android:text="남성"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button_signup_unselected"
+                    android:text="여성"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="생년월일"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <LinearLayout
+                android:id="@+id/layout_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_birth">
+
+                <NumberPicker
+                    android:id="@+id/year_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp" />
+
+                <NumberPicker
+                    android:id="@+id/month_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp" />
+
+                <NumberPicker
+                    android:id="@+id/day_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_next"
+                style="@style/NextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="다음"
+                android:textStyle="bold"
+                android:enabled="false"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_birth" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

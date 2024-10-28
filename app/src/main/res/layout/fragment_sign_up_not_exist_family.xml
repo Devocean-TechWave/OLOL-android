@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.login.SignUpNotExistFamilyFragment">
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="가족의 닉네임을 입력해주세요!"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_title_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="다른 가족 구성원들이 닉네임을 보고 들어와요."
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textView_title"
+        app:layout_constraintTop_toBottomOf="@+id/textView_title" />
+
+    <ImageView
+        android:id="@+id/imageView_intro"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_family"
+        app:layout_constraintStart_toStartOf="@+id/textView_title_description"
+        app:layout_constraintTop_toBottomOf="@+id/textView_title_description" />
+
+    <TextView
+        android:id="@+id/textView_family_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="가족명을 입력해주세요."
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView_intro"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_intro" />
+
+    <EditText
+        android:id="@+id/editText_family_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/background_edittext_unselected"
+        android:ems="10"
+        android:hint="우리 가족만의 특별한 이름을 넣어주세요."
+        android:inputType="text"
+        android:textSize="14sp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:textColorHint="#8B95A1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView_family_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView_family_name" />
+
+    <TextView
+        android:id="@+id/textView_family_name_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="이미 있는 닉네임이에요! 다른 닉네임을 입력해주세요."
+        android:textColor="@color/redColor"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_family_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_family_name" />
+
+    <TextView
+        android:id="@+id/textView_family_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="본인은 가족 중 어떤 역할인가요?"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView_family_name_error"
+        app:layout_constraintTop_toBottomOf="@+id/textView_family_name_error" />
+
+    <EditText
+        android:id="@+id/editText_family_role"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/background_edittext_unselected"
+        android:ems="10"
+        android:hint="예시) 첫째 딸, 엄마, 아빠, 동생"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:textColorHint="#8B95A1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView_family_role"
+        app:layout_constraintTop_toBottomOf="@+id/textView_family_role" />
+
+    <Button
+        android:id="@+id/button_make_family"
+        style="@style/NextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="가족 만들기"
+        android:textStyle="bold"
+        android:enabled="false"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

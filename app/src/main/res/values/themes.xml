@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.OLOL" parent="Theme.AppCompat.Light.NoActionBar"/>
+    <style name="Theme.OLOL" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/mainColor</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowBackground">#FDFDFD</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="colorControlActivated">@color/mainColor</item> <!-- 커서 색상 -->
+        <item name="android:windowLightStatusBar">true</item>   <!-- 상태바 아이콘(true: 검정 / false: 흰색) -->
+        <item name="android:navigationBarColor">@android:color/transparent</item> <!-- 하단 탐색바 배경 -->
+    </style>
 </resources>
