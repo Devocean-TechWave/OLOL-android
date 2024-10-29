@@ -33,7 +33,7 @@
                 android:layout_height="130dp"
                 android:layout_marginTop="24dp"
                 android:src="@drawable/default_profile_image"
-                android:background="@drawable/bigcircle_border"
+                android:background="@drawable/bg_bigcircle_border"
                 android:padding="3dp"
                 android:layout_gravity="center_horizontal"/>
             <TextView
