@@ -9,10 +9,11 @@ import com.project.olol.R
 import com.project.olol.presentation.ui.component.BottomNavItem
 import com.project.olol.presentation.ui.component.NavigationBar
 import com.project.olol.presentation.ui.home.HomeFragment
+import com.project.olol.presentation.ui.mission.AlbumFragment
 import com.project.olol.presentation.ui.my.MyFragment
 import com.project.olol.presentation.ui.ranking.RankingFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), HomeFragment.OnGoToAlbumListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -45,6 +46,13 @@ class MainActivity : AppCompatActivity() {
                     .commit()
             }
         }
+    }
+
+    override fun onGoToAlbum() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, AlbumFragment())
+            .addToBackStack(null)
+            .commit()
     }
 }
 
