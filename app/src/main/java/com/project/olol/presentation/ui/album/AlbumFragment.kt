@@ -1,4 +1,4 @@
-package com.project.olol.presentation.ui.mission
+package com.project.olol.presentation.ui.album
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
